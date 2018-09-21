@@ -1,0 +1,28 @@
+<html>
+
+<body>
+<div>
+    <form method="post">
+        <input type="text" name="firstName" placeholder="Фамилия" />
+        <input type="text" name="lastName" placeholder="Имя">
+        <input type="text" name="region" placeholder="region">
+        <input type="text" name="city" placeholder="city">
+        <button type="submit">Добавить</button>
+    </form>
+</div>
+
+<div>Список сообщений</div>
+
+{{#clients}}
+    <div>
+        <b>{{id}}</b>
+        <i>{{firstName}}</i>
+        <i>{{lastName}}</i>
+    {{#clientGuardItemCollection}}
+            <i>{{region}}</i>
+            <i>{{city}}</i>
+        {{/clientGuardItemCollection}}
+    </div>
+{{/clients}}
+</body>
+</html>
